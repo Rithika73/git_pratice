@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hostname') {
+            steps {
+                sh '''
+                    echo 'this is to get hostname'
+                    hostname
+                '''
+            }
+        }
+         stage('memory') {
+            steps {
+                sh '''
+                    echo 'this is to get memory'
+                    free -h
+                '''
+            }
+        }
+         stage('top') {
+            steps {
+                sh '''
+                    echo 'this is to get task manager'
+                    top | head -10
+                '''
+            }
+        }
+         stage('running process ') {
+            steps {
+                sh '''
+                    echo 'this is to get running process'
+                    ps -aux | head -10
+                '''
+            }
+        }
+    }
+}

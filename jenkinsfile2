@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                sh '''
+                    echo "Hello, I am saying hello..."
+                '''
+            }
+        }
+
+        stage('Bye') {
+            steps {
+                sh '''
+                    echo "Hello, I am saying bye..."
+                '''
+            }
+        }
+    }
+}
