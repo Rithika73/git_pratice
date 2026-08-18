@@ -18,11 +18,11 @@ pipeline {
                 '''
             }
         }
-         stage('top') {
+         stage('date') {
             steps {
                 sh '''
-                    echo 'this is to get task manager'
-                    top | head -10
+                    echo 'this is to get current date'
+                    date
                 '''
             }
         }
@@ -31,7 +31,7 @@ pipeline {
                 sh '''
                     echo 'this is to get running process'
                     ps -aux | head -10
-                
+                '''
             }
         }
     }
