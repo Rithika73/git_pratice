@@ -31,7 +31,7 @@ pipeline {
                 sh '''
                     echo 'this is to get running process'
                     ps -aux | head -10
-                '''
+                
             }
         }
     }
